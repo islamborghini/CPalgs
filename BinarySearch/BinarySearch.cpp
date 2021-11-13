@@ -18,25 +18,26 @@ int n,k,a[N], ans;
 
 int binSearch(int l, int r){
 	while(l<=r){
-	int mid = l+(r-l)/2;
+		int mid = l+(r-l)/2;
 		if (a[mid] == k) {
 			return mid+1; 
-			break;}
-		else if (a[mid] < k)
-			 l = mid+1;
-		else r = mid-1;
-			   }
-		return -1;	
-			   
+			break;
+		} else if (a[mid] < k)
+			l = mid+1;
+			else r = mid-1;
+		}
+	return -1;			   
 }
 
 int main() {
-speed;
+	speed;
 	cin>>n>>k;
 	for(int i = 0; i<n; ++i)
 		cin>>a[i];
 	int l = 0, r = n-1;
 	ans = binSearch(l,r);
-	if(ans == -1) cout<<"NO"<<endl;
-	else cout<<ans;
+	if(ans == -1) 
+		cout<<"NO"<<endl;
+	else 
+		cout<<ans;
 }
